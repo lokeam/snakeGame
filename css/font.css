@@ -1,0 +1,16 @@
+/* Keeping this file in case fonts need to loaded externally */
+
+@font-face {
+  font-family: "04b03Regular";
+  src: url("../fonts/04b03Regular.eot"), /* IE9 Compat Modes */
+  		 url("../fonts/04b03Regular.woff2") format('woff2'), /* Super Modern Browsers */
+  		 url("../fonts/04b03Regular.woff") format('woff'), /* Pretty Modern Browsers */
+  		 url("../fonts/04b03Regular.ttf") format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "Gamegirl";
+  src: url("../fonts/Gamegirl.woff2") format('woff2'), /* Super Modern Browsers */
+  		 url("../fonts/Gamegirl.woff") format('woff'), /* Pretty Modern Browsers */
+  		 url("../fonts/Gamegirl.ttf") format('truetype'); /* Safari, Android, iOS */
+}

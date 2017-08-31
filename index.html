@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Speed Snake: An HTML5 canvas game in JS coded in less than 180 minutes</title>
+	<meta name="description" content="Speed Snake: An HTML5 canvas game in JS coded in less than 180 minutes">
+	<meta name="author" content="Ahnming Loke">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./css/font.css">
+
+	<!-- Inline fonts for faster loading -->
+	<style type="text/css">
+		@font-face {
+		  font-family: "04b03Regular";
+		  src: url("./fonts/04b03Regular.eot"), /* IE9 Compat Modes */
+		  		 url("./fonts/04b03Regular.woff2") format('woff2'), /* Super Modern Browsers */
+		  		 url("./fonts/04b03Regular.woff") format('woff'), /* Pretty Modern Browsers */
+		  		 url("./fonts/04b03Regular.ttf") format('truetype'); /* Safari, Android, iOS */
+		}
+
+		@font-face {
+		  font-family: "Gamegirl";
+		  src: url("./fonts/Gamegirl.woff2") format('woff2'), /* Super Modern Browsers */
+		  		 url("./fonts/Gamegirl.woff") format('woff'), /* Pretty Modern Browsers */
+		  		 url("./fonts/Gamegirl.ttf") format('truetype'); /* Safari, Android, iOS */
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
+</head>
+<body>
+	<div class="container">
+
+		<canvas id="canvas" height="480" width="640" ></canvas>
+		<div id="about">
+			<div>
+				<button id="toggle">Learn about the project</button>
+			</div>
+			<div id="info">
+				<p>Hello! I'm Ahnming Loke and I'm a Front End Engineer.</p>
+				<p>This was my first attempt at making an HTML5 canvas game.</p>
+				<p>The challenge in this project was to see how much could be done within three hours time. Within about 180 minutes, I was able to figure out how to code a title screen and a workable prototype of the classic <a target="_blank" href="https://en.wikipedia.org/wiki/Snake_(video_game)"><span>Snake</span></a> video game that first appeared in arcades around 1976.</p>
+				<p>The application is coded in vanilla Object-Orientated javascript using EcmaScript 6 syntax to help with readability for the single class.</p>
+				<p>The design aesthetic for both this page and the game is inspired from the 8-bit area of NES home (<a target="_blank" href="https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">ファミリーコン</a>) console videogames.</p>
+				<p class="TLDR">TL;DR.</p>
+				<p>Please visit the <a href="https://www.github.com/lokeam">README</a> doc for further project information.</p>
+				<p>Special thanks to <a href="https://www.youtube.com/watch?v=nRKw60NPS1A">Adrian Borromeo</a> for use of the snake graphic.</p>
+			</div>
+		</div>
+	</div>
+
+	<!--App files-->
+	<script type="text/javascript" src="./src/titleScreen.js"></script>
+	<script type="text/javascript" src="./src/app.js"></script>
+
+	<!-- show/hide info text -->
+	<script type="text/javascript">
+
+			let showHide = (function(){
+
+				let toggle = document.getElementById('toggle'),
+						info = document.getElementById('info');
+
+				toggle.addEventListener('click', toggleText);
+
+				function toggleText() {
+					console.log('clicked');
+				  info.classList.toggle("fadeIn");
+				};
+
+				return {
+					toggleText: toggleText
+				};
+			})();
+	</script>
+
+</body>
+</html>
