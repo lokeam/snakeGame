@@ -36,7 +36,6 @@
     }
     /* Ensure custom font is usable by drawing text after fonts are fully downloaded */
     function textHandler() {
-        console.log('made it!');
 
         /* Pixelize the main image and scale up */
         ctx.webkitImageSmoothingEnabled = false;
@@ -61,8 +60,6 @@
     document.onkeydown = e => {
         const key = (e.keyCode ? e.keyCode : e.which);
         if ( key == "13" ) {
-            console.log('enter hit');
-
             ctx.clearRect(0, 0, 640, 480);
 
         } else if (key == undefined ) {
